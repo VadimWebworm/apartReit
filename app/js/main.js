@@ -57,25 +57,62 @@ $(function () {
         $('#' + id).addClass('active-tab').fadeIn();
         return false;
     });
-// Blocking scroll maps
- var mapTitle = document.createElement('div'); mapTitle.className = 'mapTitle';
- mapTitle.textContent = 'Для активации карты нажмите по ней';
- wrapMap.appendChild(mapTitle);
- wrapMap.onclick = function() {
-    
-     this.children[0].removeAttribute('style');
-   
-     mapTitle.parentElement.removeChild(mapTitle);
- }
- wrapMap.onmousemove = function(event) {
-     mapTitle.style.display = 'block';
-     if(event.offsetY > 10) mapTitle.style.top = event.offsetY + 20 + 'px';
-     if(event.offsetX > 10) mapTitle.style.left = event.offsetX + 20 + 'px';
- }
- wrapMap.onmouseleave = function() {
+    // Blocking scroll maps
+    var mapTitle = document.createElement('div'); mapTitle.className = 'mapTitle';
+    mapTitle.textContent = 'Для активации карты нажмите по ней';
+    wrapMap.appendChild(mapTitle);
+    wrapMap.onclick = function () {
 
-     mapTitle.style.display = 'none';
- }
+        this.children[0].removeAttribute('style');
+
+        mapTitle.parentElement.removeChild(mapTitle);
+    }
+    wrapMap.onmousemove = function (event) {
+        mapTitle.style.display = 'block';
+        if (event.offsetY > 10) mapTitle.style.top = event.offsetY + 20 + 'px';
+        if (event.offsetX > 10) mapTitle.style.left = event.offsetX + 20 + 'px';
+    }
+    wrapMap.onmouseleave = function () {
+
+        mapTitle.style.display = 'none';
+    }
+
+    $('.header').sticky({
+        topSpacing: 0
+    });
+
+    //custom scrollspy 
+    var sections = $('.section__visible')
+        , nav = $('.header__menu')
+        , nav_height = nav.outerHeight();
+
+    $(window).on('scroll', function () {
+        var cur_pos = $(this).scrollTop();
+
+        sections.each(function () {
+            var top = $(this).offset().top - nav_height,
+                bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= top && cur_pos <= bottom) {
+                nav.find('a').removeClass('active');
+                sections.removeClass('active');
+
+                $(this).addClass('active');
+                nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
+            }
+        });
+    });
+
+    nav.find('a').on('click', function () {
+        var $el = $(this)
+            , id = $el.attr('href');
+
+        $('html, body').animate({
+            scrollTop: $(id).offset().top - nav_height
+        }, 500);
+
+        return false;
+    });
 
     //  // Перевод SVG в Inline
     //  $('img.header__logo').each(function () {
@@ -96,4 +133,3 @@ $(function () {
     // });
 
 });
- 

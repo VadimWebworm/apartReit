@@ -37,6 +37,7 @@ gulp.task('script', function () {
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+        'node_modules/smoothscroll/smoothscroll.js'
 
     ])
         .pipe(concat('libs.min.js'))

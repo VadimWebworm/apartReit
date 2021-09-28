@@ -5,7 +5,7 @@
 //start header
 .header {
     background-color: $black;
-    z-index: 20;
+    z-index: 1000;
     width: 100%;
 }
 .header_fixed {
@@ -317,29 +317,46 @@
 //start footer
 .footer {
     background-color: $russet;
-    height: 70px;
+    height: 75px;
+    text-align: center;
 }
 .footer__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+ 
+}
+.footer__logo{
+    img{
+        height: 40px; 
+    }
+}
+.footer__logo-text{
+    font-size: 25px;
+    padding-bottom: 17px;
+
 }
 .footer__logo-copyright {
-    padding-bottom: 20px;
-    font-size: 14px;
+    padding-bottom: 15px;
+    font-size: 11px;
     font-family: Arial, sans-serif;
     opacity: 0.7;
 }
-.footer__menu li a {
-    opacity: 0.7;
+.social__links{
+//    padding-bottom: 10px;
+    li{
+        display: inline-block;
+        padding-right: 10px;
+    }
+    img{
+        height: 17px;
+    }
 }
 //end footer
 
 //start contacts page
 .contacts__wrapper {
     padding: 100px 0;
-    // background-image: url(../images/bg__contacts-page-desktop.jpg);
-    background-image: url(../images/bg__prototype-one.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -613,9 +630,9 @@
     max-width: 900px;
     width: 100%;
     border-top: 2px solid rgba($color: $orange, $alpha: 0.8);
-    background-color: rgba($color: $pink, $alpha: 1);
+    background-color: rgba($color: #f9fbfa, $alpha: 0.95);
     border-left: 2px solid rgba($color: $orange, $alpha: 0.8);
-    // z-index: 10;
+    border-radius: 6px;
     &::before {
         content: "";
         position: absolute;
@@ -625,21 +642,17 @@
         height: 100%;
         background-color: rgba($color: $orange, $alpha: 0.8);
         z-index: -1;
+        border-radius: 6px;
     }
 }
-// .tab-box__wrapper{
-//     
-//     height: 100%;
-// }
 .page-box {
-    padding: 20px 20px 10px 20px;
-  
-    // height: 800px;
-   
-    font-size: 20px;
+    padding: 45px 20px 10px 40px;
+    height: 700px;
+    font-size: 18px;
     @include source;
     color: $black;
     font-weight: 300;
+
 }
 .page-box__title {
     font-size: 35px;
@@ -648,8 +661,40 @@
     font-weight: 600;
     padding-left: 20px;
 }
-.page-box__line{
+.page-box__line {
     margin-bottom: 30px;
+}
+.page-box__content {
+    p {
+        font-weight: 600;
+        font-size: 18px;
+    }
+    ul {
+        padding-bottom: 10px;
+    }
+    ul li {
+        list-style: outside;
+        margin-left: 30px;
+    }
+    span {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    div {
+        padding-top: 10px;
+    }
+    a {
+        @include source;
+        color: $black;
+        font-weight: 300;
+        transition: all 0.1s;
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+.tab-email{
+    padding-bottom: 10px;
 }
 //start rules
 //end services-page
