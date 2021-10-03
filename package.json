@@ -22,5 +22,7 @@
     "slick-carousel": "^1.8.1",
     "@fancyapps/fancybox": "^3.5.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "smoothscroll": "^0.4.0"
+  }
 }
