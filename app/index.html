@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="css/style.min.css">
 
 <body>
+    <div id="preloader">
+        <div id="preloader-inner"></div>
+    </div>
+    
     <div class="section__visible" id="main">
         <header class="header">
             <div class="container">
@@ -211,10 +215,10 @@
                                 style="background-image: url(images/album/house__three2.jpg);">
 
                             </a>
-                            <a class="about__album-item" data-fancybox="gallery" href="images/album/house__three3.jpg"
+                            <!-- <a class="about__album-item" data-fancybox="gallery" href="images/album/house__three3.jpg"
                                 style="background-image: url(images/album/house__three3.jpg);">
 
-                            </a>
+                            </a> -->
                             <a class="about__album-item" data-fancybox="gallery" href="images/album/house__three4.jpg"
                                 style="background-image: url(images/album/house__three4.jpg);">
 
@@ -367,11 +371,11 @@
                                     data-wow-delay="1.55s"
                                     style="background-image: url(images/album/house__three2.jpg);"></div>
                             </div>
-                            <div>
+                            <!-- <div>
                                 <div class="thumbs__item animate__animated animate__fadeInLeft wow"
                                     data-wow-delay="1.55s"
                                     style="background-image: url(images/album/house__three3.jpg);"></div>
-                            </div>
+                            </div> -->
                             <div>
                                 <div class="thumbs__item animate__animated animate__fadeInLeft wow"
                                     data-wow-delay="1.55s"
@@ -481,11 +485,10 @@
         <section class="location">
             <div class="container__fluid">
                 <div class="location__map">
-                    <div id="wrapMap"><iframe style="pointer-events: none;"
-                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A449f4aca5a72f40aa21c5a706ed006dc3b903f7048e6765b9047d0394152f922&amp;source=constructor"
-                            width="100%" height="600" frameborder="0">
-
-                        </iframe>
+                    <div id="wrapMap">
+                        <iframe style="pointer-events: none;"
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab55e24701ff0791797d0059e703eea235d6becdadb999ba62135acd4c119307f&amp;source=constructor"
+                            width="100%" height="600" frameborder="0"></iframe>
                     </div>
                     <div class="location__map-box">
                         <div class="location__box-logo header__logo">
@@ -536,7 +539,7 @@
                 </div>
                 <div class="road__subtitle">
                     <p>По приезду в заранее оговоренное время мы вас встретим по адресу: 152024, г.
-                        Переславль-Залесский, ул. Ямская, 2 (магазин "Пятерочка").</p>
+                        Переславль-Залесский, ул. Ямская, 1 (магазин "Пятерочка").</p>
                 </div>
             </div>
         </section>
@@ -717,11 +720,15 @@
                 </div>
             </div>
             <ul class="social__links">
-                <li><a href="#" target="_blank" class="wow fadeInUp"><img src="images/booking_logo.svg" alt=""> </a></li>
+                <li><a href="#" target="_blank" class="wow fadeInUp"><img src="images/booking_logo.svg" alt=""> </a>
+                </li>
                 <li><a href="#" target="_blank" class="wow fadeInUp"><img src="images/airbnb_logo.svg" alt=""> </a></li>
             </ul>
         </div>
     </footer>
+    <div class="whatsApp">
+        <a href="https://wa.me/79106659243"><img src="images/Whatsapp_icon.svg" alt=""></a>
+    </div>
 
 
 

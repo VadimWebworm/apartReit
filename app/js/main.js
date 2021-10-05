@@ -1,4 +1,11 @@
 $(function () {
+    $(window).on('beforeunload', function () {
+        $(window).scrollTop(0);
+    })
+    $('#preloader-inner').fadeOut();
+    $('#preloader').delay(500).fadeOut('slow');
+
+
     $('.slider__inner').slick({
         fade: true,
         arrows: false,
@@ -119,6 +126,13 @@ $(function () {
         return false;
     });
 
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.whatsApp').fadeIn();
+        } else {
+            $('.whatsApp').fadeOut();
+        }
+    });
     //  // Перевод SVG в Inline
     //  $('img.header__logo').each(function () {
     //     var $img = $(this);

@@ -52,7 +52,15 @@ li {
 .active{
     color: $orange !important;
 }
-// .mov{
-//     display: none !important;
-//     animation: none !important;
-// }
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: $russet;
+    border-radius: 6px;
+    border: 1px solid #f9fbfa;
+}
