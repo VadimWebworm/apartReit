@@ -1,128 +1,130 @@
+@media (max-width: 1325px) {
+    .about__album {
+        max-width: 568px;
+    }
+    .about__album-item {
+        max-width: 550px;
+        height: 330px;
+    }
+    .about__info-title {
+        font-size: 38px;
+    }
+    .about__info {
+        font-size: 20px;
+        span {
+            font-size: 20px;
+        }
+    }
+}
+@media (max-width: 1170px) {
+    .slider__background-title {
+        font-size: 40px;
+    }
+    // .about__album {
+    //     max-width: 758px;
+    // }
+    // .about__album-item {
+    //     max-width: 740px;
+    //     height: 425px;
+    // }
+}
 @media (max-width: 1100px) {
+    .about {
+        padding: 50px 0;
+    }
+    .about__inner {
+        flex-wrap: wrap;
+    }
+    .about__album {
+        margin-left: 9px;
+        max-width: 898px;
+    }
+    .about__album-item {
+        max-width: 889px;
+        height: 530px;
+    }
+    .about__info {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 25px;
+        span {
+            font-size: 25px;
+        }
+    }
+    .about__info-title {
+        font-size: 40px;
+    }
+}
+@media (max-width: 912px) {
+    .about__album {
+        max-width: 755px;
+    }
+    .about__album-item {
+        max-width: 738px;
+        height: 425px;
+    }
+}
+@media (max-width: 767px) {
+    .slider__inner-background {
+        bottom: -175px;
+    }
     .thumbs {
         display: none;
     }
-}
-@media (max-width: 1050px) {
-    .meetings__inner {
-        justify-content: space-between;
+    .about__album {
+        margin-left: 0;
+        max-width: 100%;
     }
-    .meetings__info {
-        padding-left: 0px;
-        margin-right: 10px;
+    .about__album-item {
+        max-width: 100%;
+        height: 330px;
     }
-    .book__inner {
-        flex-wrap: wrap;
-        justify-content: center;
+    .about__info-title {
+        font-size: 38px;
     }
-    .filters-group,
-    .search-group {
-        margin: 10px 50px;
-    }
-}
-@media (max-width: 1000px) {
-    .promo {
-        min-height: 500px;
-    }
-}
-@media (max-width: 830px) {
-    .download__inner {
-        &-title {
-            font-size: 35px;
-        }
-        &-text {
-            font-size: 37px;
+    .about__info {
+        font-size: 20px;
+        span {
+            font-size: 20px;
         }
     }
-    //animate
-    .book__inner-box {
-        animation-delay: 0s;
-        animation-duration: 1s;
+}
+@media (max-width: 600px) {
+    .about__album-item {
+        height: 330px;
     }
 }
-@media (max-width: 800px) {
-    .promo__inner-title {
-        font-size: 120px;
-    }
-    .promo__inner-text {
-        font-size: 50px;
-    }
-    .container__fluid {
-        padding: 0 10px;
-    }
-    .menu__list {
-        padding-left: 10px;
-        li + li {
-            margin-left: 30px;
-        }
-    }
-    .curators__inner-item img {
-        width: 300px;
-        height: 373px;
-    }
-    .meetings__inner {
-        flex-wrap: wrap;
-    }
-}
-@media (max-width: 650px) {
-    .header__contact .header__contact-write {
-        width: 160px;
-        padding: 15px 0;
-    }
-    .header__contact-write:before {
-        left: 6px;
-    }
-    .curators__inner-item img {
-        width: 250px;
-        height: 311px;
-    }
-}
-@media (max-width: 530px) {
-    .menu__list {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        height: 65%;
-        flex-direction: column;
-        padding-left: 0px;
-        li + li {
-            margin: 20px 0px;
-        }
-        .active {
-            color: #fff !important;
-        }
-    }
-    .header__inner a {
-        &:hover {
-            color: #fff;
-        }
-    }
-    .header__contact {
-        display: none;
-    }
-    .footer__list {
-        display: block;
-    }
+@media (max-width: 540px) {
     .header__menu {
-        position: fixed;
+        display: none;
+        // position: relative;
+    }
+    .menu__list {
+        display: none;
+        position: absolute;
+        z-index: 10000;
+        background-color: $black;
+        top: 69px;
         left: 0;
-        top: 0;
-        z-index: 99;
-        width: 40%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba($color: $orange, $alpha: 0.8);
-        transition: 0.5s;
-        transform: translateX(-100%);
+        right: 0;
+        width: 100%;
+        border-bottom: 5px solid $orange;
+        padding-left: 0;
+        a {
+            padding: 17px 0 17px 11px;
+            font-weight: 400;
+            display: block;
+        }
+        li {
+            display: block;
+            text-align: center;
+            & + li {
+                margin-left: 0px;
+                border-top: 1px solid $orange;
+            }
+        }
     }
-    .menu_active {
-        transform: translateX(0px);
-    }
-    .header__inner {
-        position: relative;
-    }
+
     .header__menu-btn {
         position: absolute;
         display: block;
@@ -145,135 +147,54 @@
             display: none;
         }
     }
-    .menu__contact {
-        display: block;
-        position: absolute;
-        top: 250px;
-    }
-    .menu__contact .menu__contact-write {
-        background-color: #fff;
-
-        // transition: all ease 0.3s;
-    }
-    .menu__contact-write:before {
-        left: 7px;
-    }
-    .content {
-        transition: 0.5s;
-        position: relative;
-        z-index: 0;
-    }
-    //   .content_active {
-    //     transform: translateX(30%);
-    //   }
-    .promo {
-        min-height: 300px;
-    }
-    .promo__inner {
-        padding: 100px 0 60px;
-    }
-    .promo__inner-title {
-        line-height: 100px;
-        font-size: 100px;
-    }
-    .promo__inner-text {
-        line-height: 60px;
-        font-size: 40px;
-    }
-
-    .curators__inner-item img {
-        width: 370px;
-        height: 460px;
-    }
-    .meetings__info-list .list-area {
-        padding: 0px;
-    }
-    .meetings__info-list .list-date {
-        padding: 0px;
-    }
-    .meetings__info-list .list-time {
-        padding: 0px;
-    }
-    .album__item {
-        height: 342px;
-        max-width: 800px;
-    }
-    .headquarters__map {
-        iframe {
-            height: 315px;
-        }
-    }
-    .filters-group,
-    .search-group {
-        margin: 10px 0px;
-    }
-    .footer {
-        margin-top: 60px;
-        padding-top: 55px;
+}
+@media (max-width: 500px) {
+    .slider__background-title {
+        font-size: 35px;
     }
 }
-@media (max-width: 415px) {
-    .menu__contact .menu__contact-write {
-        display: inline;
-        // width: 120px;
-        font-size: 10px;
-        padding: 10px 5px 10px 25px;
-    }
-    .footer__menu {
-        height: 50px;
-        a {
-            font-size: 12px;
-        }
-    }
-    .footer__title {
-        font-size: 10px;
-        span {
-            font-size: 20px;
-        }
-    }
-    .promo__inner {
-        padding: 80px 0 40px;
-    }
-    .promo__inner-title {
-        line-height: 100px;
-        font-size: 80px;
-    }
-    .promo__inner-text {
-        line-height: 50px;
+@media (max-width: 400px) {
+    .slider__background-title {
         font-size: 30px;
     }
-    .curators__inner-item img {
-        width: 300px;
-        height: 373px;
+    .about{
+        padding: 20px 0;
     }
-    .download__inner {
-        &-title {
-            font-size: 25px;
+    .about__album-item {
+        height: 200px;
+    }
+    .about__info-title {
+        font-size: 35px;
+    }
+    .about__info {
+        margin-top: 0px;
+        font-size: 18px;
+        span {
+            font-size: 18px;
         }
-        &-text {
-            font-size: 32px;
-        }
     }
 }
-@media (max-width: 350px) {
-    .textfield {
-        padding-right: 90px;
-        width: 100%;
+@media (max-width: 368px) {
+    .slider__bottom-text {
+        bottom: -20px;
     }
-    .btn-group .btn:not(:first-child) {
-        margin-left: 0px;
+    .slider__background-title {
+        font-size: 25px;
     }
-}
-@media (max-width: 330px) {
-    .curators__inner-item img {
-        width: 250px;
-        height: 311px;
+    .promo__slider-wrapper,
+    .slider__item {
+        min-height: 600px;
     }
-}
-@media (max-width: 255px) {
-    .textfield {
-        padding-right: 10px;
-        width: 100%;
+    .about__info-title {
+        font-size: 32px;
     }
 }
-
+@media (max-width: 306px) {
+    .slider__background-title {
+        margin-bottom: 0px;
+        font-size: 35px;
+    }
+    .slider__inner-background {
+        bottom: -200px;
+    }
+}

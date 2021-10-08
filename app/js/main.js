@@ -1,7 +1,9 @@
 $(function () {
+
     $(window).on('beforeunload', function () {
         $(window).scrollTop(0);
     })
+
     $('#preloader-inner').fadeOut();
     $('#preloader').delay(500).fadeOut('slow');
 
@@ -37,6 +39,37 @@ $(function () {
         asNavFor: '.about__album-inner',
         focusOnSelect: true,
         arrows: false,
+        responsive: [
+            {
+                breakpoint: 1325,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            // {
+            //     breakpoint: 1172,
+            //     settings: {
+            //         slidesToShow: 4,
+            //         slidesToScroll: 2,
+            //     }
+            // },
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 913,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                }
+            }
+
+        ]
 
     });
 
@@ -51,9 +84,11 @@ $(function () {
             "close"
         ],
     });
+
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $('.contacts__wrapper').css({ 'background-attachment': 'scroll' });
-        // $('.contacts__wrapper').css({ 'background-image': "url('../images/bg__contacts-page-mobile.jpg')" });
+        $('.about').css({ 'background-image': 'url("images/bg_about-adaptive.jpg")'});
+
     }
 
     $('.rules__tabs .tab').on('click', function (event) {
@@ -63,33 +98,6 @@ $(function () {
         $(this).addClass('active');
         $('#' + id).addClass('active-tab').fadeIn();
         return false;
-    });
-    // Blocking scroll maps
-    if ($('#wrapMap').length === 0) return;
-    else {
-        var mapTitle = document.createElement('div'); mapTitle.className = 'mapTitle';
-        mapTitle.textContent = 'Для активации карты нажмите по ней';
-        wrapMap.appendChild(mapTitle);
-        wrapMap.onclick = function () {
-
-            this.children[0].removeAttribute('style');
-
-            mapTitle.parentElement.removeChild(mapTitle);
-        }
-        wrapMap.onmousemove = function (event) {
-            mapTitle.style.display = 'block';
-            if (event.offsetY > 10) mapTitle.style.top = event.offsetY + 20 + 'px';
-            if (event.offsetX > 10) mapTitle.style.left = event.offsetX + 20 + 'px';
-        }
-        wrapMap.onmouseleave = function () {
-
-            mapTitle.style.display = 'none';
-        }
-    }
-
-
-    $('.header').sticky({
-        topSpacing: 0
     });
 
     //custom scrollspy 
@@ -126,13 +134,53 @@ $(function () {
         return false;
     });
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.whatsApp').fadeIn();
-        } else {
-            $('.whatsApp').fadeOut();
+    //adaptive menu
+    $('.header__menu-btn').on('click', function (e) {
+        e.preventDefault();
+        $('.header__menu-btn').toggleClass('menu__btn-active');
+        $('.header__menu').toggleClass('menu_active');
+        $('.content').toggleClass('content_active');
+        $('.menu__list').slideToggle();
+    })
+
+
+    if ($('body').is('.page__index')) {
+
+        // Blocking scroll maps
+        var mapTitle = document.createElement('div'); mapTitle.className = 'mapTitle';
+        mapTitle.textContent = 'Для активации карты нажмите по ней';
+        wrapMap.appendChild(mapTitle);
+        wrapMap.onclick = function () {
+
+            this.children[0].removeAttribute('style');
+
+            mapTitle.parentElement.removeChild(mapTitle);
         }
-    });
+        wrapMap.onmousemove = function (event) {
+            mapTitle.style.display = 'block';
+            if (event.offsetY > 10) mapTitle.style.top = event.offsetY + 20 + 'px';
+            if (event.offsetX > 10) mapTitle.style.left = event.offsetX + 20 + 'px';
+        }
+        wrapMap.onmouseleave = function () {
+
+            mapTitle.style.display = 'none';
+        }
+
+
+        $('.header').sticky({
+            topSpacing: 0
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.whatsApp').fadeIn();
+            } else {
+                $('.whatsApp').fadeOut();
+            }
+        });
+    }
+
+
     //  // Перевод SVG в Inline
     //  $('img.header__logo').each(function () {
     //     var $img = $(this);
@@ -152,3 +200,4 @@ $(function () {
     // });
 
 });
+

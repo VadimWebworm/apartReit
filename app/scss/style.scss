@@ -80,6 +80,9 @@
 .menu__contact {
     display: none;
 }
+.header__menu.menu_active{
+    display: block;
+}
 
 //end header
 
@@ -159,6 +162,7 @@
     font-size: 50px;
     color: #fff;
     margin-bottom: 50px;
+    padding: 0 10px;
 }
 #rc-small-bookings-widget-root {
     background-color: transparent;
@@ -196,9 +200,12 @@
     text-align: center;
     z-index: 101;
     margin-bottom: 10px;
+    max-width: 700px;
+    width: 100%;
+
 }
 .slider__inner-text {
-    max-width: 700px;
+    padding: 0px 20px 0px 20px;
 }
 .slider__item-text {
     @include source;
@@ -243,7 +250,7 @@
     // padding: 0 150px;
 }
 .about__album {
-    max-width: 760px;
+    max-width: 758px;
 }
 .about__album-inner {
     margin-bottom: 20px;
@@ -269,36 +276,15 @@
     border-radius: 2px;
 }
 
-// .thumbs .slick-slide {
-//     width: 141px !important;
-// }
-// // .thumbs .slick-list {
-// //     margin-left: -30px;
-// //     margin-right: -13px;
-// // }
-// .thumbs .slick-track {
-//     margin-left: 12px;
-// }
-
-// .thumbs .slick-track div + div {
-//     // margin-left: 20.5px;
-//     // margin-left: 23.5px;
-//     margin-left: 9.5px;
-
-// }
-// .thumbs .slick-arrow {
-//     display: none !important;
-// }
-// .about__album-inner .slick-arrow{
-//     display: none !important;
-// }
 .about__info {
-    max-width: 600px;
+    width: 600px;
+    // height: 600px;
     @include source;
     font-weight: 500;
     font-size: 25px;
-    padding-left: 30px;
     color: $black;
+    background-color: rgba($color: #f9fbfa, $alpha: 0.9);
+    padding: 10px 10px 10px 30px;
 }
 .about__info-title {
     font-weight: 600;
@@ -835,4 +821,7 @@
 }
 
 //end preloader
+
+@import "media";
+
 
