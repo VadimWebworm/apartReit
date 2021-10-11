@@ -16,17 +16,27 @@
         }
     }
 }
+@media (max-width: 1226px) {
+    .rules {
+        padding: 100px 0;
+    }
+    .tabs {
+        max-width: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .rules__tabs {
+        flex-wrap: wrap;
+    }
+    .tab__content::before {
+        top: 25px;
+        left: 15px;
+    }
+}
 @media (max-width: 1170px) {
     .slider__background-title {
         font-size: 40px;
     }
-    // .about__album {
-    //     max-width: 758px;
-    // }
-    // .about__album-item {
-    //     max-width: 740px;
-    //     height: 425px;
-    // }
 }
 @media (max-width: 1100px) {
     .about {
@@ -53,6 +63,11 @@
     }
     .about__info-title {
         font-size: 40px;
+    }
+}
+@media (max-width: 1023px) {
+    .location__map-box {
+        display: none;
     }
 }
 @media (max-width: 912px) {
@@ -88,16 +103,50 @@
             font-size: 20px;
         }
     }
+    .page-box {
+        height: auto;
+    }
+}
+@media (max-width: 624px) {
+    .contacts__inner-list li {
+        font-size: 25px;
+    }
 }
 @media (max-width: 600px) {
     .about__album-item {
         height: 330px;
     }
+    .contacts__inner-list span {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .contacts__inner-list li a {
+        display: block;
+        margin: 10px 0 0 0px;
+        & + a {
+            margin-left: 0px;
+        }
+    }
+}
+@media (max-width: 551px) {
+    .road__item-title {
+        font-size: 25px;
+    }
+    .road__subtitle {
+        font-size: 20px;
+    }
+    .road__item-text {
+        font-size: 18px;
+    }
+    .icon-car,
+    .icon-bus {
+        font-size: 25px;
+        padding-left: 10px;
+    }
 }
 @media (max-width: 540px) {
     .header__menu {
         display: none;
-        // position: relative;
     }
     .menu__list {
         display: none;
@@ -147,17 +196,43 @@
             display: none;
         }
     }
+    .header__inner a:hover{
+        color: #fff;
+    }
 }
 @media (max-width: 500px) {
     .slider__background-title {
         font-size: 35px;
     }
+    .road__inner {
+        flex-wrap: wrap;
+    }
+    .road__item-title {
+        font-size: 30px;
+    }
+    .road__subtitle {
+        font-size: 25px;
+    }
+    .road__item-text {
+        font-size: 20px;
+    }
+    .road__item + .road__item {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    // .icon-car,
+    // .icon-bus {
+    //     display: block;
+    //     padding-left: 0px;
+    //     text-align: center;
+    //     padding-top: 7px;
+    // }
 }
 @media (max-width: 400px) {
     .slider__background-title {
         font-size: 30px;
     }
-    .about{
+    .about {
         padding: 20px 0;
     }
     .about__album-item {
@@ -173,6 +248,13 @@
             font-size: 18px;
         }
     }
+    .contacts__inner-title,
+    .road__title {
+        font-size: 48px;
+    }
+    .contacts__inner-subtitle {
+        font-size: 30px;
+    }
 }
 @media (max-width: 368px) {
     .slider__bottom-text {
@@ -187,6 +269,13 @@
     }
     .about__info-title {
         font-size: 32px;
+    }
+    .whatsApp {
+        right: 0.5em;
+        a img{
+            height: 50px;
+            width: 50px;
+        }
     }
 }
 @media (max-width: 306px) {

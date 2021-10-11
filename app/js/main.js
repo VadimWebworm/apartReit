@@ -88,6 +88,7 @@ $(function () {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $('.contacts__wrapper').css({ 'background-attachment': 'scroll' });
         $('.about').css({ 'background-image': 'url("images/bg_about-adaptive.jpg")'});
+        $('.menu__list').toggleClass('menu__list-adaptive');
 
     }
 

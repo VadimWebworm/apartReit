@@ -30,6 +30,11 @@
         color: $orange;
     }
 }
+.menu__list-adaptive a {
+    &:hover {
+        color: #fff;
+    }
+}
 .header__contact .header__contact-write {
     width: 200px;
     background-color: $orange;
@@ -80,7 +85,7 @@
 .menu__contact {
     display: none;
 }
-.header__menu.menu_active{
+.header__menu.menu_active {
     display: block;
 }
 
@@ -202,7 +207,6 @@
     margin-bottom: 10px;
     max-width: 700px;
     width: 100%;
-
 }
 .slider__inner-text {
     padding: 0px 20px 0px 20px;
@@ -683,42 +687,45 @@
 //end services-page
 
 // start booking
-.booking{
+.booking {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 50px 0;
 }
-.rc-6639b6{
+.rc-6639b6 {
     margin-top: 0;
     padding: 30px 0;
 }
-#rc-bookings-widget-root, #rc-demo-bookings-widget-root{
-        background-color: rgba($color: #f9fbfa, $alpha: 0.9);
-        border-radius: 6px;
-
+#rc-bookings-widget-root,
+#rc-demo-bookings-widget-root {
+    background-color: rgba($color: #f9fbfa, $alpha: 0.9);
+    border-radius: 6px;
 }
-.rc-flat{
+.rc-flat {
     border-bottom: 1px solid $orange;
     padding: 20px 0;
 }
-.rc-flat__book__btn{
+.rc-flat__book__btn {
     background-color: $orange;
 }
-.rc-6639b6 .rc-flat__book__btn{
+.rc-6639b6 .rc-flat__book__btn {
     // background-color: $orange;
     background-color: rgba($color: $orange, $alpha: 0.95);
     border: 1px solid $orange;
-    &:hover{
-        background-color: rgba($color: $orange, $alpha: 1.0);
+    &:hover {
+        background-color: rgba($color: $orange, $alpha: 1);
     }
 }
-.rc-6639b6 a.rc-flat__more__btn{
+.rc-6639b6 a.rc-flat__more__btn {
     border: 1px solid $orange;
     color: $orange;
-    &:hover{
+    &:hover {
         background-color: $pink;
     }
+}
+.booking__social{
+    background-image: url();
 }
 //end booking
 //start whatsApp
@@ -733,26 +740,24 @@
     animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-play-state: running;
-    a img{
+    a img {
         display: block;
         height: 60px;
-        width: 60px
-        
+        width: 60px;
     }
-    &:hover{
+    &:hover {
         animation: none;
         transform: scale(1.2);
     }
-
 }
-.whatsApp__block{
+.whatsApp__block {
     display: block;
 }
 @keyframes whatsApp_pulse {
     0% {
         transform: scale(1);
     }
-    50%{
+    50% {
         transform: scale(1.1);
     }
     100% {
@@ -823,5 +828,3 @@
 //end preloader
 
 @import "media";
-
-
