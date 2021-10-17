@@ -25,6 +25,9 @@
         margin-right: 0;
         margin-bottom: 20px;
     }
+    .tab__content {
+        max-width: none;
+    }
     .rules__tabs {
         flex-wrap: wrap;
     }
@@ -127,6 +130,11 @@
             margin-left: 0px;
         }
     }
+    #wrapMap {
+        iframe {
+            height: 400px !important;
+        }
+    }
 }
 @media (max-width: 551px) {
     .road__item-title {
@@ -196,7 +204,7 @@
             display: none;
         }
     }
-    .header__inner a:hover{
+    .header__inner a:hover {
         color: #fff;
     }
 }
@@ -272,7 +280,7 @@
     }
     .whatsApp {
         right: 0.5em;
-        a img{
+        a img {
             height: 50px;
             width: 50px;
         }

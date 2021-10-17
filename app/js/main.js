@@ -47,13 +47,6 @@ $(function () {
                     slidesToScroll: 1,
                 }
             },
-            // {
-            //     breakpoint: 1172,
-            //     settings: {
-            //         slidesToShow: 4,
-            //         slidesToScroll: 2,
-            //     }
-            // },
             {
                 breakpoint: 1100,
                 settings: {
@@ -67,7 +60,7 @@ $(function () {
                     slidesToShow: 4,
                     slidesToScroll: 2,
                 }
-            }
+            },
 
         ]
 
@@ -87,8 +80,10 @@ $(function () {
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $('.contacts__wrapper').css({ 'background-attachment': 'scroll' });
-        $('.about').css({ 'background-image': 'url("images/bg_about-adaptive.jpg")'});
+        $('.about').css({ 'background-image': 'url("images/bg_about-adaptive.jpg")' });
         $('.menu__list').toggleClass('menu__list-adaptive');
+        $('.slick-track').css({ 'min-width': '11000px' });
+
 
     }
 
@@ -143,6 +138,17 @@ $(function () {
         $('.content').toggleClass('content_active');
         $('.menu__list').slideToggle();
     })
+    $('.menu__list a').on('click', function (e) {
+        e.preventDefault();
+        $('.header__menu-btn').removeClass('menu__btn-active');
+        $('.header__menu').removeClass('menu_active');
+        $('.content').removeClass('content_active');
+        $('.menu__list.menu__list-adaptive').slideUp();
+
+    })
+    $('.rc-flat[data-id="29111"]').toggleClass('.house__one')
+    // $('[data-id="29111"]').toggleClass('.house__one')
+    // var  = document.querySelector('.dropdown__content[data-content="'+data_id+'"]');
 
 
     if ($('body').is('.page__index')) {
@@ -179,26 +185,10 @@ $(function () {
                 $('.whatsApp').fadeOut();
             }
         });
+
+        const element = document.querySelector('#rc-small-bookings-widget-root');
+        element.classList.add('animate__animated', 'animate__fadeInUp', 'wow');
     }
-
-
-    //  // Перевод SVG в Inline
-    //  $('img.header__logo').each(function () {
-    //     var $img = $(this);
-    //     var imgClass = $img.attr('class');
-    //     var imgURL = $img.attr('src');
-    //     $.get(imgURL, function (data) {
-    //         var $svg = $(data).find('svg');
-    //         if (typeof imgClass !== 'undefined') {
-    //             $svg = $svg.attr('class', imgClass + ' replaced-svg');
-    //         }
-    //         $svg = $svg.removeAttr('xmlns:a');
-    //         if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-    //             $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-    //         }
-    //         $img.replaceWith($svg);
-    //     }, 'xml');
-    // });
 
 });
 

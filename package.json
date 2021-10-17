@@ -23,6 +23,7 @@
     "@fancyapps/fancybox": "^3.5.7"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "smoothscroll": "^0.4.0"
   }
 }
